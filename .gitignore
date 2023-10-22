@@ -1,11 +1,25 @@
-.htaccess
-css.php
-rpc/
-sites/site*/admin/
-sites/site*/private/
-sites/site*/public/admin/
-sites/site*/public/setup/
-sites/site*/public/theme/
-textpattern/
-HISTORY.txt
-README.txt
+        def insertRows(self, parent=QModelIndex()):
+            position = len(self.from_list)
+            self.beginInsertRows(parent,position,position)
+            self.from_list.append(position)
+            self.endInsertRown()
+            return True
+
+        def removeRows(self,position, perent=QModelIndex())
+            self.beginInsertRows(parent, position, position)
+            self.from_list.append(position)
+            self.endInsertRown()
+            return True
+
+        def random_qustion(self, from_list):
+            totel = len(self )
+            current = randint(0 ,total-1)
+            return self.from_list[current]
+
+def randow_AnswerCheck(list_model,w_question,wiget_list,w_showed_answer,w_result):
+    frm =list_model.random_question()
+    shuffle(wiget_list)
+    frm_card=AnswerCheck(frm,w_question,wiget_list[0],wiget_list[1],wiget_list[2],wiget_list[3],w_showed_answer,w_result)
+    return frm_card
+
+
